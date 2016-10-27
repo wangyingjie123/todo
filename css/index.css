@@ -1,0 +1,282 @@
+@keyframes zoom-out-down {
+  40% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  100% {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0);
+    transform-origin: center bottom;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); } }
+
+.header .title, .search .search-inner, .container .item-list .done .main::after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto; }
+
+@media screen and (max-width: 1080px) {
+  html {
+    font-size: 100px; } }
+
+@media screen and (max-width: 414px) {
+  html {
+    font-size: 38.33333px; } }
+
+@media screen and (max-width: 412px) {
+  html {
+    font-size: 38.14815px; } }
+
+@media screen and (max-width: 380px) {
+  html {
+    font-size: 35.18519px; } }
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 34.72222px; } }
+
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 29.62963px; } }
+
+* {
+  list-style: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0; }
+
+body {
+  margin: 0;
+  font-size: 16px;
+  height: 100vh;
+  overflow: hidden; }
+
+@font-face {
+  font-family: iconfont;
+  src: url(../fonts/iconfont.woff); }
+
+.header {
+  width: 100%;
+  height: 1.3rem;
+  background-color: #32dbff;
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+  position: relative;
+  color: #fff; }
+  .header .title {
+    color: #fff;
+    display: block;
+    width: 3.6rem;
+    height: 0.7rem;
+    text-align: center;
+    line-height: 0.7rem;
+    font-weight: bold; }
+  .header .icon-daohang {
+    display: block;
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    left: 0.8rem;
+    top: 0.4rem;
+    font-size: 0.5rem; }
+  .header .icon-rili {
+    display: block;
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    right: 0.8rem;
+    top: 0.4rem;
+    font-size: 0.5rem; }
+
+.icon-font {
+  font-family: "iconfont"  !important; }
+
+.icon-shanchu:before {
+  content: "\f008b"; }
+
+.icon-daohang:before {
+  content: "\e62a"; }
+
+.icon-rili:before {
+  content: "\e609"; }
+
+.icon-sousuo:before {
+  content: "\343e"; }
+
+.search {
+  width: 100%;
+  height: 1.3rem;
+  background-color: #eee;
+  position: relative; }
+  .search .search-inner {
+    width: 85%;
+    height: 0.7rem;
+    border-radius: 0.3rem;
+    text-align: center; }
+  .search .icon-sousuo {
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 85%;
+    margin: auto;
+    color: #ccc; }
+
+.container {
+  height: 100vh;
+  padding: 0.4rem;
+  overflow-x: hidden; }
+  .container .item-list .item {
+    width: 100%;
+    height: 1.3rem;
+    margin-top: 0.4rem;
+    border-radius: 0.8rem;
+    box-shadow: 1px 1px 0.2rem #ccc;
+    border: 1px solid #ccc;
+    position: relative; }
+    .container .item-list .item a {
+      display: block;
+      float: left;
+      width: 0.5rem;
+      height: 0.5rem;
+      margin: 0.4rem;
+      background-color: #32dbff;
+      border-radius: 50%; }
+    .container .item-list .item .main {
+      display: block;
+      width: 70%;
+      height: 1.3rem;
+      float: left;
+      line-height: 1.3rem; }
+    .container .item-list .item .right {
+      font-style: normal;
+      color: #ccc;
+      display: block;
+      position: absolute;
+      right: 0.4rem;
+      top: 0.4rem;
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 100%;
+      transform: translate3d(400%, 0, 0); }
+  .container .item-list .done .cirle-left {
+    background-color: #ccc; }
+  .container .item-list .done .main {
+    color: #ccc; }
+    .container .item-list .done .main::after {
+      content: '';
+      display: block;
+      height: 2px;
+      margin-left: 1.3rem;
+      margin-right: 1.3rem;
+      background-color: #ccc; }
+  .container .item-list .done .right {
+    transition: transform 1.5s ease;
+    transform: translate3d(0, 0, 0); }
+
+.item-one {
+  border: 2px dashed #32dbff;
+  color: #32dbff;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  text-align: center;
+  width: 100%;
+  border-radius: 0.8rem;
+  box-shadow: 1px 1px 0.2rem #ccc; }
+  .item-one:active {
+    background-color: #32dbff;
+    color: #fff; }
+
+.xiaoshi {
+  animation: zoom-out-down .8s ease both; }
+
+@keyframes zoom-in-up {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  60% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); } }
+
+.footer {
+  width: 100%;
+  height: 1.4rem;
+  background-color: #32dbff;
+  position: fixed;
+  bottom: 0;
+  line-height: 1.4rem;
+  color: #fff;
+  text-align: center; }
+
+@keyframes flip-out-x {
+  0% {
+    transform: perspective(400px); }
+  30% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    opacity: 1; }
+  100% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    opacity: 0; } }
+
+.hinge {
+  animation: flip-out-x .8s ease both; }
+
+.content-box {
+  width: 100%;
+  height: 100vh;
+  background-color: transparent;
+  position: absolute;
+  top: 1.3rem;
+  z-index: 3;
+  display: none; }
+
+.addevent {
+  width: 100%;
+  height: 6rem;
+  position: absolute;
+  border-radius: 0.4rem;
+  top: 1.5rem;
+  background-color: #e7e1cd; }
+  .addevent .even-title {
+    display: block;
+    margin: 0.4rem; }
+  .addevent input {
+    display: block;
+    width: 90%;
+    height: 1rem;
+    margin: 0 auto;
+    padding-top: 0.4rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #ccc; }
+  .addevent a {
+    display: block;
+    border: 2px solid #ccc;
+    box-shadow: 0 0 3px #666;
+    border-radius: 0.2rem;
+    width: 1.3rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    text-align: center;
+    color: #666;
+    text-decoration: none;
+    position: absolute;
+    top: 4.3rem; }
+    .addevent a:active {
+      box-shadow: none;
+      top: 4.4rem; }
+  .addevent .yes {
+    left: 1rem; }
+  .addevent .black {
+    right: 1rem; }
+
+.zoom-in-up {
+  animation: zoom-in-up .8s ease both;
+  display: block; }
